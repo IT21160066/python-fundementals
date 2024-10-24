@@ -73,17 +73,5 @@ print(Color.RED)
 print(Color.RED.name)
 print(Color.RED.value)
 
-books = ['Abc', 'Hh', 'cb']
-print(books)
-books.append('Jj')
-print(books)
-books.extend(['tt', 'yy'])
-print(books)
-books.insert(2, 'test')
-print(books)
-# books[1:2] = ['test2', 'test3', 'test4']
-# print(books)
 
-books.sort(key=str.lower)
-print(books)
 
