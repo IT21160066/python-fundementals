@@ -49,3 +49,87 @@ del dog['height']
 print(dog)
 dog_copy = dog.copy()
 print(dog_copy)
+
+# loops
+
+condition = True
+while condition:
+    print('The condition true')
+    condition = False
+
+count = 0
+while count < 5:
+    print(count)
+    count = count  + 1
+
+items = [1,2, 3, 4, 5]
+for index, item in enumerate(items):
+    print('index >>', index, 'item >>', item)
+
+items = [1,2, 3, 4, 5]
+for item in items:
+    if item == 2:
+        continue
+    print(item)
+
+# functions
+
+def hello(name='amal', age=8):
+    print('hello', name, 'age', age)
+hello()
+
+def change(val):
+    val['name'] = 'jj'
+    print(val['name'])
+
+value = {'name': 'bb'}
+change(value)
+
+print(value)
+
+def sample(name):
+    print(name)
+    return name, 8, 'hhh'
+
+print('returned value >>', sample('john'))
+
+# variable scope
+
+age = 8
+
+def test():
+    name = 'aa'
+    print(age, name)
+test()
+
+print(age)
+
+# nested functions
+
+def talk(phrase):
+    def say(word):
+        print(word)
+
+    words = phrase.split(' ')
+    for word in words:
+        say(word)
+
+talk('hello hi')
+
+
+def count():
+    count = 0
+
+    def increment():
+        nonlocal count
+        count += 1
+        print(count)
+    increment()
+
+count()
+
+
+
+
+
+
